@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8250df"/>
+      <stop offset="1" stop-color="#2f81f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <!-- the eye of divine sight -->
+  <path d="M8 32 C18 18, 46 18, 56 32 C46 46, 18 46, 8 32 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="8.5" fill="#fff"/>
+  <!-- a trajectory DAG inside the iris -->
+  <circle cx="29" cy="29" r="1.8" fill="#8250df"/>
+  <circle cx="35.5" cy="30.5" r="1.8" fill="#2f81f7"/>
+  <circle cx="31" cy="35.5" r="1.8" fill="#e16f24"/>
+  <path d="M29 29 L35.5 30.5 M29 29 L31 35.5" stroke="#57606a" stroke-width="1"/>
+</svg>

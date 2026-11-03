@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanjaya — Trajectory Viewer</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/preload.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/logo.svg" alt="" width="20" height="20">
+      <span class="brand-name">Sanjaya</span>
+      <span id="live" class="live" title="Live updates">●</span>
+    </div>
+    <div class="conv-picker">
+      <button id="back" class="icon-btn" title="Back to parent conversation" hidden>←</button>
+      <select id="conv-select" title="Conversation"></select>
+      <label class="follow" title="Follow the conversation this pane is attached to, or the most recently active one">
+        <input type="checkbox" id="follow" checked> Follow
+      </label>
+    </div>
+  </header>
+
+  <section id="stats" class="stats"></section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="graph" class="active">Graph</button>
+    <button role="tab" data-tab="timeline">Timeline</button>
+    <button role="tab" data-tab="tools">Tools</button>
+    <button role="tab" data-tab="context">Context</button>
+    <button role="tab" data-tab="subagents">Subagents</button>
+    <button role="tab" data-tab="notes">Notes</button>
+  </nav>
+
+  <section class="toolbar">
+    <div id="graph-controls" class="seg">
+      <button data-mode="phases" class="active" title="Consecutive steps grouped by work type">Phases</button>
+      <button data-mode="turns" title="One node per user turn">Turns</button>
+      <button data-mode="steps" title="Every model step and tool call">Steps</button>
+    </div>
+    <input id="search" type="search" placeholder="Filter: tool, text, #step, is:error" autocomplete="off">
+    <button id="fit" class="icon-btn" title="Fit graph">⤢</button>
+    <button id="jump-latest" class="icon-btn" title="Jump to latest step">⇣</button>
+    <button id="export" class="icon-btn" title="Export Markdown report">⭳</button>
+  </section>
+
+  <main id="main">
+    <div id="view-graph" class="view active">
+      <svg id="graph" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="graph-empty" class="empty" hidden></div>
+    </div>
+    <div id="view-timeline" class="view"></div>
+    <div id="view-tools" class="view"></div>
+    <div id="view-context" class="view"></div>
+    <div id="view-subagents" class="view"></div>
+    <div id="view-notes" class="view"></div>
+  </main>
+
+  <aside id="inspector" class="inspector" hidden>
+    <div class="inspector-head">
+      <div id="insp-title" class="insp-title"></div>
+      <div class="insp-actions">
+        <button id="insp-prev" class="icon-btn" title="Previous step">↑</button>
+        <button id="insp-next" class="icon-btn" title="Next step">↓</button>
+        <button id="insp-close" class="icon-btn" title="Close">✕</button>
+      </div>
+    </div>
+    <div id="insp-body" class="insp-body"></div>
+  </aside>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>

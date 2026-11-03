@@ -1,0 +1,17 @@
+{
+  "name": "sanjaya",
+  "displayName": "Sanjaya — Live Agent Trajectory Viewer",
+  "version": "1.0.0",
+  "description": "Live agent trajectory viewer for Antigravity and Jetski. Renders conversations as an interactive DAG (phases, turns, steps), a latency timeline, tool and token/context analytics, and a subagent tree, with a step inspector, annotations, steering, forking, and Markdown export in the Auxiliary Pane.",
+  "logo": "assets/logo.svg",
+  "category": "observability",
+  "keywords": ["trajectory", "visualizer", "dag", "trace", "debugger", "subagents", "observability", "antigravity"],
+  "capabilities": {
+    "sidecars": true
+  },
+  "suggestedPrompts": [
+    "Open Sanjaya to watch this conversation's trajectory live",
+    "Show the subagent tree and token usage for this conversation in Sanjaya",
+    "Find the failing tool calls in this trajectory with Sanjaya"
+  ]
+}

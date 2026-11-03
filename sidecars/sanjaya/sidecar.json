@@ -1,0 +1,21 @@
+{
+  "command": "python3",
+  "args": ["server.py"],
+  "restart_policy": "always",
+  "display_name": "Sanjaya - Trajectory Viewer",
+  "description": "Sanjaya v1.0.0 — live agent trajectory DAG, timeline, tool/token analytics, subagent tree, step inspector, steer and fork.",
+  "has_web_ui": true,
+  "env": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "ui_config": {
+    "display_name": "Sanjaya - Trajectory Viewer",
+    "views": [
+      {
+        "path": "/",
+        "entrypoint": "SIDECAR_UI_ENTRYPOINT_AUX_PANE",
+        "title": "Sanjaya"
+      }
+    ]
+  }
+}
